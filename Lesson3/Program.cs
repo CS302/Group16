@@ -10,25 +10,49 @@ namespace Lesson3
     {
         static void Main(string[] args)
         {
-            Worker worker1 = new Worker("John", 27, 461352);
-            worker1.Print();
+            Worker[] workers = new Worker[5];
+            //workers[0] = new Worker("John", 27, 461352);
+            //workers[1] = new Worker("Hulk", 25, 465138);
+            //workers[2] = new Worker("Helena", 25, 478656);
+            Driver dr1 = new Driver("Jason", 45, 46513, "BMW", 256);
+            Manager mn1 = new Manager("Mary", 27, 461577, 15);
 
-            Worker worker2 = new Worker("Hulk", 25);
-            worker2.Print();
+            /*Worker worker = dr1;
+            Driver dr2 = (Driver)worker;
+            Console.WriteLine(dr2.hours);*/
 
-            Worker worker3 = new Worker("Helena", 25, 478656);
+            Worker worker = mn1;
+            Driver dr = worker as Driver;
+            if (dr != null)
+            {
+                Console.WriteLine(dr.hours);
+            }
+            else
+            {
+                Console.WriteLine("Что-то пошло не так");
+            }
+            /*if (worker is Driver)
+            {
+                Driver dr2 = (Driver)worker;
+                Console.WriteLine(dr2.hours);
+            }
+            else
+            {
+                Console.WriteLine("Что-то пошло не так");
+            }*/
 
-            Console.WriteLine(Worker.count);
+
+            
         }
     }
 
-    class Worker
+    abstract class Worker
     {
         private string name; //поле класса
         private int age;
         public int snn;
         public static int count; //поле count относится не к объекту-работнику, а к классу
-
+        protected double salary;
         public int Age
         {
             set 
@@ -63,6 +87,7 @@ namespace Lesson3
             Age = age;
             this.snn = snn;
             count++;
+            salary = 30000;
         }
 
         public Worker(string name, int age)
@@ -86,7 +111,8 @@ namespace Lesson3
             return age;
         }
 
-        public void Print() //метод
+        abstract public double GetBonus();
+        public virtual void Print() //метод
         {
             Console.WriteLine("Имя: " + name);
             Console.WriteLine("Возраст: " + age);
