@@ -46,16 +46,30 @@ namespace Lesson3
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     abstract class Worker
     {
+        #region Поля
+        /// <summary>
+        /// 
+        /// </summary>
         private string name; //поле класса
         private int age;
         public int snn;
         public static int count; //поле count относится не к объекту-работнику, а к классу
         protected double salary;
+
+        #endregion
+
+        #region Свойства
+        /// <summary>
+        /// 
+        /// </summary>
         public int Age
         {
-            set 
+            set
             {
                 if (value < 0)
                 {
@@ -66,7 +80,7 @@ namespace Lesson3
                     age = value;
                 }
             }
-            get 
+            get
             {
                 return age;
             }
@@ -74,13 +88,20 @@ namespace Lesson3
         public string Name
         {
             get { return name; }
-        }
-        
+        } 
+        #endregion
+
+        #region Конструкторы
         static Worker()
         {
             count = 0;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="age"></param>
+        /// <param name="snn"></param>
         public Worker(string name, int age, int snn)
         {//главный конструктор
             this.name = name;
@@ -92,8 +113,10 @@ namespace Lesson3
 
         public Worker(string name, int age)
             : this(name, age, 0) //второстепенный конструктор
-        {   }
+        { } 
+        #endregion
 
+        #region Методы
         public void SetAge(int a)
         {
             if (a <= 0)
@@ -118,6 +141,7 @@ namespace Lesson3
             Console.WriteLine("Возраст: " + age);
             Console.WriteLine("ИНН: " + snn);
             Console.WriteLine();
-        }
+        } 
+        #endregion
     }
 }

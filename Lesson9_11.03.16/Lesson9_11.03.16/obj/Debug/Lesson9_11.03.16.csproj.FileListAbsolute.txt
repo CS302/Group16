@@ -1,0 +1,6 @@
+D:\Programs\Lesson9_11.03.16\Lesson9_11.03.16\bin\Debug\Lesson9_11.03.16.exe.config
+D:\Programs\Lesson9_11.03.16\Lesson9_11.03.16\bin\Debug\Lesson9_11.03.16.exe
+D:\Programs\Lesson9_11.03.16\Lesson9_11.03.16\bin\Debug\Lesson9_11.03.16.pdb
+D:\Programs\Lesson9_11.03.16\Lesson9_11.03.16\obj\Debug\Lesson9_11.03.16.csprojResolveAssemblyReference.cache
+D:\Programs\Lesson9_11.03.16\Lesson9_11.03.16\obj\Debug\Lesson9_11.03.16.exe
+D:\Programs\Lesson9_11.03.16\Lesson9_11.03.16\obj\Debug\Lesson9_11.03.16.pdb

@@ -1,0 +1,6 @@
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Exceptions\bin\Debug\Lesson8_Exceptions.exe.config
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Exceptions\bin\Debug\Lesson8_Exceptions.exe
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Exceptions\bin\Debug\Lesson8_Exceptions.pdb
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Exceptions\obj\Debug\Lesson8_Exceptions.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Exceptions\obj\Debug\Lesson8_Exceptions.exe
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Exceptions\obj\Debug\Lesson8_Exceptions.pdb

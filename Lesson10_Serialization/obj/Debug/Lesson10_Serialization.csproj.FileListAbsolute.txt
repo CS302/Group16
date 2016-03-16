@@ -1,0 +1,6 @@
+C:\Users\Alex\Documents\GitHub\Group16\Lesson10_Serialization\bin\Debug\Lesson10_Serialization.exe.config
+C:\Users\Alex\Documents\GitHub\Group16\Lesson10_Serialization\bin\Debug\Lesson10_Serialization.exe
+C:\Users\Alex\Documents\GitHub\Group16\Lesson10_Serialization\bin\Debug\Lesson10_Serialization.pdb
+C:\Users\Alex\Documents\GitHub\Group16\Lesson10_Serialization\obj\Debug\Lesson10_Serialization.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\Group16\Lesson10_Serialization\obj\Debug\Lesson10_Serialization.exe
+C:\Users\Alex\Documents\GitHub\Group16\Lesson10_Serialization\obj\Debug\Lesson10_Serialization.pdb

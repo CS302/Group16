@@ -1,0 +1,6 @@
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Lorry\bin\Debug\Lesson8_Lorry.exe.config
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Lorry\bin\Debug\Lesson8_Lorry.exe
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Lorry\bin\Debug\Lesson8_Lorry.pdb
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Lorry\obj\Debug\Lesson8_Lorry.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Lorry\obj\Debug\Lesson8_Lorry.exe
+C:\Users\Alex\Documents\GitHub\Group16\Lesson8_Lorry\obj\Debug\Lesson8_Lorry.pdb
