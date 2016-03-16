@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson10_Serialization", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson10", "Lesson10\Lesson10.csproj", "{E2F168CB-96A6-4A1F-8263-9EB25108D9E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkersEditor", "WorkersEditor\WorkersEditor.csproj", "{D7BE310F-12E3-4CC9-8BB8-B3BB8D030894}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -106,6 +108,12 @@ Global
 		{E2F168CB-96A6-4A1F-8263-9EB25108D9E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E2F168CB-96A6-4A1F-8263-9EB25108D9E4}.Trial|Any CPU.ActiveCfg = Trial|Any CPU
 		{E2F168CB-96A6-4A1F-8263-9EB25108D9E4}.Trial|Any CPU.Build.0 = Trial|Any CPU
+		{D7BE310F-12E3-4CC9-8BB8-B3BB8D030894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7BE310F-12E3-4CC9-8BB8-B3BB8D030894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7BE310F-12E3-4CC9-8BB8-B3BB8D030894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7BE310F-12E3-4CC9-8BB8-B3BB8D030894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7BE310F-12E3-4CC9-8BB8-B3BB8D030894}.Trial|Any CPU.ActiveCfg = Release|Any CPU
+		{D7BE310F-12E3-4CC9-8BB8-B3BB8D030894}.Trial|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

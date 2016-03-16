@@ -13,6 +13,12 @@ namespace WorkersLibrary
         public int snn;
         public static int count; //поле count относится не к объекту-работнику, а к классу
         protected double salary;
+
+        public int Snn
+        {
+            get {return snn;} 
+            set {snn = value;} 
+        }
         public int Age
         {
             set
@@ -34,6 +40,7 @@ namespace WorkersLibrary
         public string Name
         {
             get { return name; }
+            set { name = value; }
         }
 
         static Worker()

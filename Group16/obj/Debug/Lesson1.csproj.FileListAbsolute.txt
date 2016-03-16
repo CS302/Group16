@@ -7,3 +7,6 @@ C:\Users\Alex\Desktop\Group16\Group16\obj\Debug\Group16.pdb
 C:\Users\Alex\Documents\GitHub\Group16\Group16\bin\Debug\Group16.exe.config
 C:\Users\Alex\Documents\GitHub\Group16\Group16\obj\Debug\Group16.exe
 C:\Users\Alex\Documents\GitHub\Group16\Group16\obj\Debug\Group16.pdb
+C:\Users\Alex\Documents\GitHub\Group16\Group16\bin\Debug\Group16.exe
+C:\Users\Alex\Documents\GitHub\Group16\Group16\bin\Debug\Group16.pdb
+C:\Users\Alex\Documents\GitHub\Group16\Group16\obj\Debug\Lesson1.csprojResolveAssemblyReference.cache
