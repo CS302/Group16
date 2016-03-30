@@ -1,0 +1,13 @@
+SELECT * FROM Drivers
+SELECT DrName FROM Drivers
+SELECT DrName FROM Drivers 
+			WHERE SNN=656565
+			
+INSERT INTO Drivers
+VALUES(789, 'Tony', 26, 'GAZ', 1024)
+
+UPDATE Drivers
+SET Hours = 128 WHERE SNN = 656565
+
+DELETE FROM Drivers
+WHERE SNN = 656565

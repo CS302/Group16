@@ -13,3 +13,5 @@ C:\Users\Alex\Documents\GitHub\Group16\WorkersEditor\obj\Debug\WorkersEditor.exe
 C:\Users\Alex\Documents\GitHub\Group16\WorkersEditor\obj\Debug\WorkersEditor.pdb
 C:\Users\Alex\Documents\GitHub\Group16\WorkersEditor\bin\Debug\WorkersLibrary.dll
 C:\Users\Alex\Documents\GitHub\Group16\WorkersEditor\bin\Debug\WorkersLibrary.pdb
+C:\Users\Alex\Documents\GitHub\Group16\WorkersEditor\obj\Debug\WorkersEditor_Content.g.cs
+C:\Users\Alex\Documents\GitHub\Group16\WorkersEditor\bin\Debug\Workers.accdb

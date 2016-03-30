@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.OleDb;
 using WorkersLibrary;
 
 namespace WorkersEditor
@@ -22,6 +23,7 @@ namespace WorkersEditor
     /// </summary>
     public partial class MainWindow : Window
     {
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Workers.accdb");
         public ObservableCollection<Worker> Workers { get; set; }
         public MainWindow()
         {
@@ -33,8 +35,22 @@ namespace WorkersEditor
             Workers.Add(new Driver("Jason", 45, 46513, "BMW", 256));
             Workers.Add(new Manager("Mary", 27, 461577, 15));
 
-            DataContext = this;
+            OleDbCommand select = new OleDbCommand("SELECT * FROM drivers", con);
+            con.Open();
+            OleDbDataReader reader = select.ExecuteReader();
+            while(reader.Read())
+            {
+                Workers.Add(new Driver(reader["DrName"].ToString(), Convert.ToInt32(reader["Age"]), Convert.ToInt32(reader["SNN"]), reader["CarType"].ToString(), Convert.ToInt32(reader["Hours"])));
+            }
 
+            select = new OleDbCommand("SELECT * FROM managers", con);
+            reader = select.ExecuteReader();
+            while (reader.Read())
+            {
+                Workers.Add(new Manager(reader["ManName"].ToString(), Convert.ToInt32(reader["Age"]), Convert.ToInt32(reader["SNN"]), Convert.ToInt32(reader["ProjCount"])));
+            }
+            con.Close();
+            DataContext = this;
         }
 
         private void workersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -56,15 +72,74 @@ namespace WorkersEditor
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
             Worker delWorker = workersList.SelectedItem as Worker;
             if (delWorker != null)
             {
+                
+                OleDbCommand delete = new OleDbCommand("DELETE FROM drivers WHERE SNN = @snn", con);
+                delete.Parameters.AddWithValue("@snn", delWorker.Snn);
+
+                con.Open();
+                delete.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Удалили \n" + delWorker.Name);
                 Workers.Remove(delWorker);
                 workersList.SelectedIndex = 0;
             }
+        }
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            if (TextBoxProjCount.Text == string.Empty)
+            {
+                Driver dr = new Driver(TextBoxName.Text, Convert.ToInt32(TextBoxAge.Text), Convert.ToInt32(TextBoxSNN.Text), TextBoxCarType.Text, Convert.ToInt32(TextBoxHours.Text));
+                OleDbCommand insert = new OleDbCommand("INSERT INTO drivers (`SNN`, `DrName`, `Age`, `CarType`, `Hours`) VALUES (@snn, @drName, @age, @carType, @hours)", con);
+                insert.Parameters.AddWithValue("@snn", dr.Snn);
+                insert.Parameters.AddWithValue("@drName", dr.Name);
+                insert.Parameters.AddWithValue("@age", dr.Age);
+                insert.Parameters.AddWithValue("@carType", dr.CarType);
+                insert.Parameters.AddWithValue("@hours", dr.Hours);
 
+                con.Open();
+                insert.ExecuteNonQuery();
+                con.Close();
+                Workers.Add(dr);
+                MessageBox.Show("Добавили \n" + dr.Name);
+                ClearTextBoxes();
+            }
+            else
+            {
+                // вставить код для добавления менеджера
+            }
+        }
+
+        private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            if (TextBoxProjCount.Text == string.Empty)
+            {
+                Driver dr = new Driver(TextBoxName.Text, Convert.ToInt32(TextBoxAge.Text), Convert.ToInt32(TextBoxSNN.Text), TextBoxCarType.Text, Convert.ToInt32(TextBoxHours.Text));
+                WorkersDataSetTableAdapters.driversTableAdapter drivers = new WorkersDataSetTableAdapters.driversTableAdapter();
+                con.Open();
+                drivers.UpdateBySNNQuery(dr.Snn, dr.Name, dr.Age, dr.CarType, dr.Hours, dr.Snn);
+                con.Close();
+                MessageBox.Show("Добавили \n" + dr.Name);
+                ClearTextBoxes();
+            }
+            else
+            {
+                // вставить код для добавления менеджера
+            }
+        }
+
+        private void ClearTextBoxes()
+        {
+            TextBoxAge.Text = string.Empty;
+            TextBoxCarType.Text = string.Empty;
+            TextBoxName.Text = string.Empty;
+            TextBoxProjCount.Text = string.Empty;
+            TextBoxSNN.Text = string.Empty;
+            TextBoxHours.Text = string.Empty;
         }
     }
 }
